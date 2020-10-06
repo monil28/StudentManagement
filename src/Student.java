@@ -189,7 +189,7 @@ public class Student extends javax.swing.JFrame {
         int c;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","*monil28");
+            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");
             insert = con1.prepareStatement("select * from adit");
             ResultSet r = insert.executeQuery();
             ResultSetMetaData m = r.getMetaData();
@@ -228,7 +228,7 @@ public class Student extends javax.swing.JFrame {
         String course = txtcourse.getText();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","*monil28");
+            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");
             insert = con1.prepareStatement("insert into adit(name,mob_no,course)values(?,?,?)");
             insert.setString(1,name);
             insert.setString(2,mob);
@@ -287,7 +287,7 @@ public class Student extends javax.swing.JFrame {
             String course = txtcourse.getText();
             
             Class.forName("com.mysql.jdbc.Driver");
-            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","*monil28");
+            con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");
             insert = con1.prepareStatement("update adit set name=?,mob_no=?,course=? where id=?");
             insert.setString(1,name);
             insert.setString(2, mob);
